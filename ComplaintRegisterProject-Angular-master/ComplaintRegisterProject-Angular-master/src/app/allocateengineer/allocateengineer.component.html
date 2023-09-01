@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Allocate Enginner
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="allocateform" (ngSubmit)="action()">
+                        <label>Select Engineer</label><br/>
+                        <select class="form-control" formControlName="select">
+                            <option *ngFor="let i of engineers" value="{{i.id}}">{{i.username}}</option>
+                        </select>
+                        <br/>
+                        <input type="submit" value="done" class="btn btn-success"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>

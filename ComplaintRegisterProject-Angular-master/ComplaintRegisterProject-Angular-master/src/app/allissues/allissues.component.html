@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+       
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+          All Raised Issues
+                </div>
+                <div class="card-body">
+                    <table class="table table striped">
+                        <tr>
+                         <th>S.No</th>
+                            <th >User Name</th>
+                            <th>User Contact</th>
+                            <th>Address</th>
+                            <th>Pin Code</th>
+                            <th >Problem</th>
+                            <th>Manager</th>
+                            <th>Manager Contact</th>
+                            <th>Engineer</th>
+                            <th>Engineer Contact</th>
+                        </tr>
+                        <tr *ngFor="let i of issues;let j=index">
+                           
+                            <td>{{j+1}}</td>
+                            <td>{{i.user.username}}</td>
+                            <td>{{i.user.phoneno}}</td>
+                            <td>{{i.user.address}}</td>
+                            <td>{{i.user.pincode}}</td>
+                            <td><b>{{i.problem}}</b></td>
+                            <td>{{i.manager.username}}</td>
+                            <td>{{i.manager.phoneno}}</td>
+                         <td>{{i.engineer.username}}</td>
+                         <td>{{i.engineer.phoneno}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+      
+    </div>
+</div>

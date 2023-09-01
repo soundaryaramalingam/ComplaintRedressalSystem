@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+       
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+          All Raised Complaints
+                </div>
+                <div class="card-body">
+                    <table class="table table striped">
+                        <tr>
+                        
+                            <th >User Name</th>
+                            <th>PhoneNo</th>
+                            <th>Address</th>
+                            <th>Pin Code</th>
+                            <th >Problem</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr *ngFor="let i of selectedcomplaint |orderBy:Key:reverse">
+                           
+                            <td>{{i.username}}</td>
+                            <td>{{i.phoneno}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.pincode}}</td>
+                            <td>{{i.problem}}</td>
+                            <td>
+                                <div *ngIf="i.statusvalue==false;then temp1;else temp2"></div>
+                                <ng-template #temp1 >
+                                   <h5 style="color: red;"> {{i.status}}</h5>
+                                </ng-template>
+                                <ng-template #temp2 ><h5 style="color: green;"> {{i.status}}</h5></ng-template>
+                            </td>
+                            <td>{{i.date}}</td>
+                            <td><div *ngIf="i.statusvalue==false;then temp3;else temp4"></div>
+                                <ng-template #temp3 >
+                                  <input type="button" value="Complaint" (click)="complaintaction(i.id)" class="btn btn-danger" />
+                                </ng-template>
+                                <ng-template #temp4 > <input type="button"  (click)="feedbackaction()" value="FeedBack" class="btn btn-success" /></ng-template>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+      
+    </div>
+</div>

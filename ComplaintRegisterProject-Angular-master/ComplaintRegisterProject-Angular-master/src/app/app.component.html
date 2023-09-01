@@ -1,0 +1,178 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isnavbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      <img src="/assets/Images/pic1.jpg" width="60px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+      <label style="font-weight: bold;font-size: larger;">Connection</label>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link active" aria-current="page">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" style="color: black;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" style="color: black;">Contact Us</a>
+        </li>
+        
+      </ul>
+      <form class="d-flex" style="padding-left: 800px;">
+      
+       <a routerLink="login" style="color: black;">Log-In</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid"  *ngIf="isnavbar1">
+
+<div class="row">
+
+
+<div class="col-md-12">
+<ngb-carousel >
+<ng-template ngbSlide>
+  <div class="picsum-img-wrapper">
+    <img src="/assets/Images/pic2.jpg" alt="" height="540px" style="display: inline-block;width: 100%;"/>
+  </div>
+
+</ng-template>
+<ng-template ngbSlide>
+  <div class="picsum-img-wrapper">
+    <img src="/assets/Images/pic3.jpg" alt="" height="540px" style="display: inline-block;width: 100%;"/>
+  </div>
+
+</ng-template>
+<ng-template ngbSlide>
+  <div class="picsum-img-wrapper">
+    <img src="/assets/Images/pic4.jpg" alt="" height="540px" style="display: inline-block;width: 100%;"/>
+  </div>
+ 
+</ng-template>
+</ngb-carousel>
+</div>
+</div>
+</div>
+
+<!--Admin Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isnavbar2">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      <img src="/assets/Images/pic1.jpg" width="60px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+      <label style="font-weight: bold;font-size: larger;">Connection</label>
+    </a>&nbsp;&nbsp;
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/users" class="nav-link active" aria-current="page">Users</a>
+        </li>&nbsp;&nbsp;
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/managers" style="color: black;">Managers</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/engineers" style="color: black;">Engineers</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedbacks" style="color: black;">FeedBacks</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/complaints" style="color: black;">Complaints</a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/allissues" style="color: black;">Issues</a>
+        </li>
+        
+        
+      </ul>
+      <form class="d-flex" style="padding-left: 430px;">
+       <a routerLink="/register" style="color: black;">Register/</a>
+       <a routerLink="/login" style="color: black;">Log-Out</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--Manager Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isnavbar4">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      <img src="/assets/Images/pic1.jpg" width="60px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+      <label style="font-weight: bold;font-size: larger;">Connection</label>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/manager/raisedcomplaintsmanager" class="nav-link active" aria-current="page">Active Complaint</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/manager/complaints" style="color: black;">View Complaints</a>
+        </li>
+       
+      </ul>
+      <form class="d-flex" style="padding-left: 700px;">
+       
+       <a routerLink="/login" style="color: black;">Log-Out</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--User Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isnavbar3">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      <img src="/assets/Images/pic1.jpg" width="60px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+      <label style="font-weight: bold;font-size: larger;">Connection</label>
+    </a>&nbsp;&nbsp;
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/user/registercomplaint" class="nav-link active" aria-current="page">Register Complaint</a>
+        </li>&nbsp;&nbsp;
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/viewallcomplaintsforuser" style="color: black;">View Complaints</a>
+        </li>
+      
+       
+      </ul>
+      <form class="d-flex" style="padding-left: 690px;">
+       
+       <a routerLink="/login" style="color: black;">Log-Out</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--Engineer Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isnavbar5">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      <img src="/assets/Images/pic1.jpg" width="60px" height="50px" style="border-radius: 30px;">&nbsp;&nbsp;
+      <label style="font-weight: bold;font-size: larger;">Connection</label>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a routerLink="/engineer/raisedcomplaintsengineer" class="nav-link active" aria-current="page">Active Complaint</a>
+        </li>
+        
+       
+       
+      </ul>
+      <form class="d-flex" style="padding-left: 800px;">
+       
+       <a routerLink="/login" style="color: black;">Log-Out</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div >
+  <router-outlet></router-outlet>
+</div>

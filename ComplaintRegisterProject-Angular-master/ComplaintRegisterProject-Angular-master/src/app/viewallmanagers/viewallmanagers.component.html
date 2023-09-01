@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+       
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+          All users
+                </div>
+                <div class="card-body">
+                    <table class="table table striped">
+                        <tr>
+                            <th>S.No</th>
+                            <th>Manager Name</th>
+                            <th>Email</th>
+                            <th>PhoneNo</th>
+                            <th>Address</th>
+                            <th>Pin Code</th>
+                           
+                            <th style="text-align: center;">Action</th>
+                        </tr>
+                        <tr *ngFor="let i of manager;let j=index">
+                            <td>{{j+1}}</td>
+                            <td>{{i.username}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.phoneno}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.pincode}}</td>
+                            
+                            <td style="text-align: center;"><input type="button" value="Update" class="btn btn-warning" (click)="update(i.id)" />&nbsp;&nbsp;
+                                <input type="button" value="Delete" class="btn btn-danger" (click)="delete(i.id)" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+      
+    </div>
+</div>

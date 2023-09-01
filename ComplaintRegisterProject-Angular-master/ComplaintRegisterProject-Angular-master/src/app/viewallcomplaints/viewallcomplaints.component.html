@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+       
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+          All  Complaints
+                </div>
+                <div class="card-body">
+                    <table class="table table striped">
+                        <tr>
+                        <th>S.No</th>
+                            <th >User Name</th>
+                            <th>PhoneNo</th>
+                            <th>Address</th>
+                            <th>Pin Code</th>
+                            <th >Problem</th>
+                            <th>Status</th>
+                            <th>Manager</th>
+                            <th>Engineer</th>
+                           
+                        </tr>
+                        <tr *ngFor="let i of complaint;let j=index" >
+                            <td>{{j+1}}</td>
+                            <td >{{i.username}}</td>
+                            <td >{{i.phoneno}}</td>
+                            <td >{{i.address}}</td>
+                            <td >{{i.pincode}}</td>
+                            <td >{{i.problem}}</td>
+                            <td>      <div  *ngIf="i.statusvalue==false;then temp1;else temp2"></div>
+                                <ng-template #temp1 >
+                                   <h6 style="color: red;"> {{i.status}}</h6>
+                                </ng-template>
+                                <ng-template #temp2 ><h6 style="color: green;"> {{i.status}}</h6></ng-template>
+                            </td>
+                            <td >{{i.manager.username}}</td>
+                            <td>      <div  *ngIf="i.engineer==null;then temp4;else temp3"></div>
+                                <ng-template #temp3 >
+                                   <h6 style="color: green;"> {{i.engineer.username}}</h6>
+                                </ng-template>
+                                <ng-template #temp4 ><h6 style="color: red;"> null</h6></ng-template>
+                            </td>
+                       
+                           
+                            
+                          
+                           
+                        </tr>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+      
+    </div>
+</div>

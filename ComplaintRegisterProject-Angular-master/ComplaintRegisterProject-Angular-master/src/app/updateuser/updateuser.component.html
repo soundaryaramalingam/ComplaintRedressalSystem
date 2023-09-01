@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <br/>
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+           <div class="card">
+            <div class="card-header"><label>Update User</label></div>
+            <div class="card-body">
+  
+                <form [formGroup]="updateuserform" (ngSubmit)="action()">
+                    <label>Username</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.username" formControlName="username"/>
+                    <label>Email</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.email" formControlName="email"/>
+                    <label>Address</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.address" formControlName="address"/>
+                    <label>Pin Code</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.pincode" formControlName="pincode"/>
+                    <label>Phone No.</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.phoneno" formControlName="phoneno"/>
+                   <br/>
+                   <input type="submit" value="Update" class="btn btn-warning"/>
+                </form>
+            </div>
+           </div> 
+        </div>
+        <div class="col-md-3">
+            
+        </div>
+    </div>
+</div>
